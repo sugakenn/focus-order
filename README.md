@@ -50,7 +50,7 @@
 &lt;/div&gt;
 </pre>
 
-## in the text area
+## In the text area
 
 In the text area, use the Enter key to move the focus, and use the Alt+Enter to start a new line.
 
