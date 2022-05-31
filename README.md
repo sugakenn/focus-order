@@ -1,7 +1,9 @@
 # focus-order
  Focus moves when the enter key is pressed in browser.
-![image](https://github.com/sugakenn/focus-order/blob/main/image.jpg)
+ 
+ 日本語の解説は[なんぶ電子ブログ「JavaScript：エンターキーでフォーカス移動」](https://nanbu.marune205.net/2021/12/javascript-enterkey-focus.html?m=1)にあります 
 
+![image](https://github.com/sugakenn/focus-order/blob/main/image.jpg)
 ## Usage
 - Modify your html source
   - Please give a class of your favorite name to the element you want to move the focus with the enter key.
