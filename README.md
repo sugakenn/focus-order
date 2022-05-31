@@ -49,5 +49,8 @@
   &lt;div&gt;Optional Comment&lt;br&gt;&lt;textarea class="inputs" name="memo" rows="5" cols="30" data-order="100"&gt;Here, pressing the enter key moves the focus.And when you press the alt+enter key, a line break will be added&lt;/textarea&gt;&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-    
+
+## in the text area
+
+In the text area, use the Enter key to move the focus, and use the Alt+Enter to start a new line.
 
