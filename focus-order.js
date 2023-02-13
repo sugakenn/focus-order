@@ -3,6 +3,7 @@ class FocusOrder {
   constructor(strSelector) {
     this.nextElements = new Map();//Map for save order
     this.init=false;
+    
     this.initOrder(strSelector);
   }
   
@@ -42,7 +43,7 @@ class FocusOrder {
       }
     });
     
-    //次にフォーカスするエレメントをMapにセット
+    //element mapping
     for (let i =0; i < wk2.length-1; i++) {
       this.nextElements.set(wk2[i],wk2[i+1]);
     }
@@ -66,7 +67,17 @@ class FocusOrder {
               }
             }
         }
-        this.nextElements.get(event.target).focus();
+        let elTarget = event.target;
+				for(let i = 0, max=this.nextElements.size; i < max; i++) {
+					let elWk = this.nextElements.get(elTarget)
+					if (elWk.disabled) {
+						//if element is disabled then goto next element 
+						elTarget=elWk;
+					} else {
+						elWk.focus();
+						break;
+					}
+				}
       }
     };
     
