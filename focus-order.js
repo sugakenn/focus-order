@@ -1,10 +1,12 @@
 class FocusOrder {
   
-  constructor(strSelector) {
+  constructor(strSelector=null) {
     this.nextElements = new Map();//Map for save order
     this.init=false;
     
-    this.initOrder(strSelector);
+    if(strSelector) {
+      this.initOrder(strSelector);
+    }
   }
   
   initOrder(strSelector) {
@@ -70,8 +72,8 @@ class FocusOrder {
         let elTarget = event.target;
 				for(let i = 0, max=this.nextElements.size; i < max; i++) {
 					let elWk = this.nextElements.get(elTarget)
-					if (elWk.disabled) {
-						//if element is disabled then goto next element 
+					if (elWk.disabled || elWk.getBoundingClientRect().width == 0) {
+						//if element is disabled or not visible then goto next element 
 						elTarget=elWk;
 					} else {
 						elWk.focus();
